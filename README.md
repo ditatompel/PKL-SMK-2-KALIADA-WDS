@@ -41,12 +41,14 @@ Adapun beberapa software tambahan untuk membantu mempermudah pengoprasian :
 
 ### Konfigurasi VPS
 Video tutorial konfigurasi VPS (Membuat Guest VM) pada Proxmox dapat dilihat di [https://www.youtube.com/watch?v=hG9oVbAL-BE](https://www.youtube.com/watch?v=hG9oVbAL-BE) menit 0 hingga menit 1:20.
+
 Pada video tersebut sebagian besar adalah konfigurasi default untuk pembuatan VM Guest.   
 
 [Dokumentasi Proxmox] [proxmox documentation]
 
 ### Installasi OS VPS (CentOS)
 VM Guest OS yang digunakan adalah CentOS versi 6.10. Video tutorial instalasi CentOS minimal dapat dilihat di [https://youtu.be/hG9oVbAL-BE?t=80](https://youtu.be/hG9oVbAL-BE?t=80) mulai menit 1:20 hingga menit 5:15.
+
 Mengenai IP, dalam hal ini peserta PKL dapat menggunakan konfigurasi IP berikut untuk Guest VM :   
 
 Network 192.168.100.0/24   
@@ -86,6 +88,7 @@ Dari 3 command diatas, maka, repo EPEL dan REMI sudah ada pada OS.
 
 #### Install MySQL
 Video [https://youtu.be/hG9oVbAL-BE?t=639](https://youtu.be/hG9oVbAL-BE?t=639) mulai menit 10:39 hingga menit 14:01
+
 Install MySQL server menggunakan `yum install`
 ```bash
 yum install mysql mysql-server -y
@@ -98,13 +101,15 @@ service mysqld start
 Secara default, setelah fresh install MySQL, user root pada aplikasi MySQL masih kosong (login tanpa password), maka setelah proses instalasi MySQL dan service MySQL sudah berjalan, jalankan `mysql_secure_installation` dan ikuti petunjuk untuk merubah password.
 
 Setelah memberikan password pada user `root MySQL`, perintahkan OS agar MySQL server berjalan secara otomatis setelah OS restart / booting dengan perintah :
+
 ```bash
 chkconfig mysqld on
 ```
 
 #### Installasi Nginx
 Video [https://youtu.be/hG9oVbAL-BE?t=840](https://youtu.be/hG9oVbAL-BE?t=840) mulai menit 14:00 hingga menit 15:53
-Install Nginx melalui yum install, jalankan auto start saat booting dan start service nginx dengan perrintah :
+Install Nginx melalui yum install, jalankan auto start saat booting dan start service nginx dengan periintah :
+
 ```bash
 yum install nginx
 chkconfig nginx on
@@ -112,7 +117,8 @@ service nginx start
 ```
 
 #### Reconfigure iptables Firewall
-Video [https://youtu.be/hG9oVbAL-BE?t=953](https://youtu.be/hG9oVbAL-BE?t=953) mulai menit 15:53 hingga menit 17:37
+Video [https://youtu.be/hG9oVbAL-BE?t=953](https://youtu.be/hG9oVbAL-BE?t=953) mulai menit 15:53 hingga menit 17:37.
+
 Secara defaut firewall pada CentOS hanya membuka port 22 (SSH).
 Konfigurasi lagi iptables supaya firewall membuka port 80 untuk http server.
 
