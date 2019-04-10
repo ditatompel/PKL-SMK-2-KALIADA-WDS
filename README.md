@@ -355,6 +355,14 @@ Selesai.
 Script `bash` sederhana untuk instalaasi PHP, MySQL, dan Nginx dapat diakses di [scripts/install.sh](scripts/install.sh).
 Script tersebut hanya installasi dasar, tidak termasuk konfigurasi.
 
+
+## FAQ
+Q : Web tidak bisa diakses. Kenapa ya?
+A :
+1. Cek apakah OS running. Pertama cek ping apakah ada ICMP Reply.
+2. Jika reply, cek firewall, apakah open port 80. (iptables -L -n)
+3. Jika open, cek Nginx service, apakah berjalan. (service nginx status)
+
 ## Glossary
 [To Be Updated]
 <!--
