@@ -357,7 +357,7 @@ Script tersebut hanya installasi dasar, tidak termasuk konfigurasi.
 
 
 ## FAQ
-Q : Web tidak bisa diakses. Kenapa ya?
+Q : Web tidak bisa diakses. Kenapa ya?   
 A :
 1. Cek apakah OS running. Pertama cek ping apakah ada ICMP Reply.
 2. Jika reply, cek firewall, apakah open port 80. (iptables -L -n)
